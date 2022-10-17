@@ -1,5 +1,3 @@
-from asyncore import read
-
 def fibonacci(n):
     list = []
     a = 0
