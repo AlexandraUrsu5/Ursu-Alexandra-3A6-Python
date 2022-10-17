@@ -8,7 +8,7 @@ def isPalindrome(number):
     else:
         return False
 
-def Palindromes(numbers):
+def palindromes(numbers):
     count = 0
     max_palindrom = 0
     for number in numbers:
@@ -21,7 +21,7 @@ def Palindromes(numbers):
 
 def main():
     numbers = [122,1221, 14441,232,23,127,343,7432] 
-    print(Palindromes(numbers))
+    print(palindromes(numbers))
 
 main()
 

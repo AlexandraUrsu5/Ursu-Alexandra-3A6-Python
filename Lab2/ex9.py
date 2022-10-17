@@ -1,4 +1,4 @@
-def Function(matrix):
+def function(matrix):
     n=len(matrix)
     m = len(matrix[0])
     r=n-1
@@ -23,6 +23,6 @@ def main():
             [2, 4, 4, 3, 7, 2],
             [5, 5, 2, 5, 6, 4],
             [6, 6, 7, 6, 7, 5]]
-    print(Function(matrix))
+    print(function(matrix))
 
 main()

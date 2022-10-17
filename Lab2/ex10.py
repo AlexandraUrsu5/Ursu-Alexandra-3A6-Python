@@ -1,12 +1,12 @@
-def MaxLenght(lists):
+def maxLenght(lists):
     max_len = 0
     for list in lists:
         if max_len < len(list):
             max_len = len(list)
     return max_len
 
-def Function(lists):
-    max_len=MaxLenght(lists)
+def function(lists):
+    max_len=maxLenght(lists)
     final_lists = []
     for i in range(max_len):
         final_lists.append([])
@@ -28,7 +28,7 @@ def Function(lists):
     
 def main():
     lists = [ [1,2,3], [5,6,7], ["a", "b", "c", "d"] ]
-    print(Function(lists))
+    print(function(lists))
     
 main()
     

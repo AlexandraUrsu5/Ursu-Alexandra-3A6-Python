@@ -1,4 +1,4 @@
-def UnderDiagonal(matrix, n, m):
+def underDiagonal(matrix, n, m):
     for i in range(n):
         for j in range(m):
             if (i > j):
@@ -13,7 +13,7 @@ def main():
            [ 3, 7, 2 ],
            [ 5, 4, 9 ]]
     
-    matrix = UnderDiagonal(mat, n, m)
+    matrix = underDiagonal(mat, n, m)
     for i in range(n):
         for j in range(m):
             print(" ", matrix[i][j], end = " ")
