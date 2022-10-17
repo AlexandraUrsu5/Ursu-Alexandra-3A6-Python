@@ -1,21 +1,25 @@
 from asyncore import read
 
-
 def fibonacci(n):
-	a = 0
-	b = 1
-	if n < 0:
-		print("Incorrect input")
-	elif n == 0:
-		return a
-	elif n == 1:
-		return b
-	else:
-		for i in range(2,n+1):
-			c = a + b
-			a = b
-			b = c
-		return b
+    list = []
+    a = 0
+    b = 1
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        list.append(a)
+        return list
+    elif n == 1:
+        list.append(b)
+        return list
+    else:
+        list = [0,1]
+        for i in range(2,n+1):
+            c = a + b
+            a = b
+            b = c
+            list.append(b)
+        return list
 
 def main():
     n = int(input('Enter the number: '))

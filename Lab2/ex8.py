@@ -1,4 +1,4 @@
-def ASCII(x, strings, flag):
+def ASCII(strings, x=1,flag=True):
     lists = []
     for string in strings:
         list = []
@@ -14,6 +14,6 @@ def main():
     x = 2
     lists = ["test", "hello", "lab002"]
     flag = False
-    print(ASCII(x,lists, flag))
+    print(ASCII(lists, x, flag))
     
 main()
