@@ -1,10 +1,10 @@
 def loop(mapping):   
-    to_return = list()
+    list1 = list()
     value = mapping['start']
-    while value not in to_return:
-        to_return.append(value)
+    while value not in list1:
+        list1.append(value)
         value = mapping[value]
-    return to_return
+    return list1
 
 def main():
     print(loop({'start': 'a', 'b': 'a', 'a': '6', '6': 'z',

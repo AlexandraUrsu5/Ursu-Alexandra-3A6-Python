@@ -1,27 +1,19 @@
-from collections.abc import Iterable
-
-#Comparați două dicționare fără a utiliza operatorul „==" care returnează Adevărat sau Fals
-def return_elements(element):
-    if isinstance(element, Iterable) and type(element) != str:
-        #returnează True dacă obiectul specificat este de tipul specificat, în caz contrar False                              
-        values = []
-        if type(element) == dict:
-            #returnează tipul de clasă
-            for el in element.values():
-                #returnează un obiect de vizualizare care conține valorile dicționarului, sub formă de listă
-                values += return_elements(el)
-        else:
-            for el in element:
-                values += return_elements(el)
-        return values
-    return [element]
-
+def funct_value(dict):
+    dictlist=[]
+    while dict !={}:
+        temp = dict.popitem()
+        dictlist.append(temp)
+    return list(dictlist)
 
 def function3(dict1, dict2):
-    return list(set(return_elements(dict1)) ^ set(return_elements(dict2)))
-
+    list1 = funct_value(dict1)
+    list2 = funct_value(dict2)
+    if list(set(list1)^set(list2)) == []:
+        return True
+    return False
 
 def main():
-    print(function3())
-    
+    dict1 = {'a': 2, 'e': 3, 'A': 6, ' ': 2, 'm': 1, 'r': 2, '.': 1, 'n': 1}
+    dict2 = {'a': 2, 'e': 3, 'A': 6, ' ': 2, 'm': 1, 'r': 2, '.': 1, 'n': 1}
+    print(function3(dict1, dict2))
 main()
